@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; // "use strict"; Defines that JavaScript code should be executed in "strict mode".
 
 var input=document.getElementById('input');   // Input/Output Button
 var number=document.querySelectorAll('.numbers div');  // Number Button
@@ -92,7 +92,12 @@ result.addEventListener("click", function(e){
     var factorial=operators.indexOf("!");
     while(factorial!=-1)
     {
-        numbers.splice(factorial, 1, factorial_num(numbers[factorial]));
+        numbers.splice(factorial, 1, factorial_num(numbers[factorial]));    // splice() used to add new element to an array 
+
+        /*The first parameter defines the position where new elements should be added (spliced in).
+        The second parameter defines how many elements should be removed.
+        The rest of the parameters define the new elements to be added.*/
+        
         operators.splice(factorial,1);
         factorial=operators.indexOf("!");
     }
